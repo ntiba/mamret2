@@ -1,0 +1,323 @@
+@charset "utf-8";
+/*! ######################################################################
+
+	MeanMenu 2.0.7
+	--------
+	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
+
+##########################################################################
+	soll costom
+####################################################################### */
+
+/*-----------------------------------
+	cover
+-----------------------------------*/
+
+
+/*-----------------------------------
+	sp header
+-----------------------------------*/
+
+a.meanmenu-reveal {
+	display: none;
+}
+
+#head_fix {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 45px;
+	padding: 7px 0;
+	font-size: 0.65rem;
+	text-align: center;
+	background: #003F87;
+	color: #FFF;
+	line-height: 1.5;
+	z-index: 101;
+}
+
+/* ヘッダー */
+.mean-container .mean-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 105px;
+	min-height: 60px !important;
+	padding: 0;
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+	z-index: 999999;
+	transition-duration: 0.3s;
+}
+
+.mean-container .mean-bar h1 {
+	position: absolute;
+	top: 45px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+	background: #FFF;
+}
+
+.mean-container .mean-bar h1 a {
+	position: absolute;
+	top: 12px;
+	left: 13px;
+	width: 225px;
+	height: 35px;
+}
+
+.mean-container .mean-bar h1 a img {
+	width: 100%;
+	height: auto;
+}
+
+/*-----------------------------------
+	
+-----------------------------------*/
+
+#sp_fb {
+	position: absolute;
+	top: 0px;
+	right: 60px;
+	width: 60px;
+	height: 60px;
+	background: #EEE;
+}
+
+#sp_fb img {
+	position: absolute;
+	top: 7px;
+	width: 44px;
+	height: 44px;
+	margin-left: -22px;
+	left: 50%;
+}
+
+#sp_fb a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 36px 0 0 0;
+	font-size: 0.75rem;
+	text-align: center;
+}
+
+/*-----------------------------------
+-----------------------------------*/
+.meanmenu-reveal-btn {
+	position: absolute;
+	display: block;
+	z-index: 99999;
+	box-sizing: border-box;
+	width: 60px;
+	height: 60px;
+	right: 0;
+	top: 45px;
+	/*	background:rgba(0,63,136,1);*/
+	background: #FFF;
+}
+
+.meanmenu-reveal {
+	display: block !important;
+	width: 26px;
+	height: 20px;
+	margin: 15px 17px 25px 17px;
+	position: relative;
+}
+
+.meanmenu-reveal:after {
+	content: "MENU";
+	position: absolute;
+	bottom: -20px;
+	/*color:#FFF;*/
+	color: rgba(0, 63, 136, 1);
+	font-size: 10px;
+	width: 60px;
+	left: -17px;
+	text-align: center;
+	display: block;
+}
+
+.meanmenu-reveal.meanclose:after {
+	content: "CLOSE";
+}
+
+/* 3本線 */
+.meanmenu-reveal span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	margin: 0 auto;
+}
+
+.meanmenu-reveal span:nth-of-type(1) {
+	top: 0;
+	/*background:#FFF;*/
+	background: rgb(1, 160, 36);
+}
+
+.meanmenu-reveal span:nth-of-type(2) {
+	top: 8px;
+	/*background:#FFF;*/
+	background: rgb(1, 156, 84);
+}
+
+.meanmenu-reveal span:nth-of-type(3) {
+	top: 16px;
+	/*background:#FFF;*/
+	background: rgb(0, 184, 61);
+}
+
+.meanmenu-reveal span:nth-of-type(1) {
+	-webkit-animation: menu-ber01 .75s forwards;
+	animation: menu-ber01 .75s forwards;
+}
+
+.meanmenu-reveal span:nth-of-type(2) {
+	transition: all .25s .25s;
+	opacity: 1;
+}
+
+.meanmenu-reveal span:nth-of-type(3) {
+	-webkit-animation: menu-ber02 .75s forwards;
+	animation: menu-ber02 .75s forwards;
+}
+
+.meanclose span:nth-of-type(1) {
+	-webkit-animation: active-menu-ber01 .75s forwards;
+	animation: active-menu-ber01 .75s forwards;
+	top: -2px;
+}
+
+.meanclose span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.meanclose span:nth-of-type(3) {
+	-webkit-animation: active-menu-ber03 .75s forwards;
+	animation: active-menu-ber03 .75s forwards;
+}
+
+@-webkit-keyframes menu-ber01 {
+	0% {
+		-webkit-transform: translateY(8px) rotate(45deg);
+	}
+
+	50% {
+		-webkit-transform: translateY(8px) rotate(0);
+	}
+
+	100% {
+		-webkit-transform: translateY(0) rotate(0);
+	}
+}
+
+@keyframes menu-ber01 {
+	0% {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	50% {
+		transform: translateY(8px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0);
+	}
+}
+
+@-webkit-keyframes menu-ber02 {
+	0% {
+		-webkit-transform: translateY(-8px) rotate(-45deg);
+	}
+
+	50% {
+		-webkit-transform: translateY(-8px) rotate(0);
+	}
+
+	100% {
+		-webkit-transform: translateY(0) rotate(0);
+	}
+}
+
+@keyframes menu-ber02 {
+	0% {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	50% {
+		transform: translateY(-8px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0);
+	}
+}
+
+@-webkit-keyframes active-menu-ber01 {
+	0% {
+		-webkit-transform: translateY(0) rotate(0);
+	}
+
+	50% {
+		-webkit-transform: translateY(10px) rotate(0);
+	}
+
+	100% {
+		-webkit-transform: translateY(10px) rotate(45deg);
+	}
+}
+
+@keyframes active-menu-ber01 {
+	0% {
+		transform: translateY(0) rotate(0);
+	}
+
+	50% {
+		transform: translateY(10px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(10px) rotate(45deg);
+	}
+}
+
+@-webkit-keyframes active-menu-ber03 {
+	0% {
+		-webkit-transform: translateY(0) rotate(0);
+	}
+
+	50% {
+		-webkit-transform: translateY(-8px) rotate(0);
+	}
+
+	100% {
+		-webkit-transform: translateY(-8px) rotate(-45deg);
+	}
+}
+
+@keyframes active-menu-ber03 {
+	0% {
+		transform: translateY(0) rotate(0);
+	}
+
+	50% {
+		transform: translateY(-8px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+}
+
+
+/*-----------------------------------
+-----------------------------------*/
+
