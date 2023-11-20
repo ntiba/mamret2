@@ -47,6 +47,11 @@
 .navbar{
     justify-content: space-between;
 }
+#wrangler li a {
+    font-size: 1.2rem;
+    text-align: justify;
+    word-break: break-word;
+}
 .row{
     padding: 10px;
 }
