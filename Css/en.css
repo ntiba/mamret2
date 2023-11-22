@@ -13,7 +13,7 @@
 
 #main_contents p {
     word-break: keep-all !important;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     text-align: justify;
     line-height: 1.5;
 }
